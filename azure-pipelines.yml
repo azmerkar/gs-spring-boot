@@ -25,9 +25,8 @@ steps:
     SourceFolder: '$(agent.builddirectory)'
     Contents: '**/*.?(war|jar)'
     TargetFolder: '$(build.artifactstagingdirectory)'
-
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: $(System.DefaultWorkingDirectory)/*
+    targetPath: $(Build.ArtifactStagingDirectory)
     artifactName: drop
 
