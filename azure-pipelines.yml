@@ -22,9 +22,10 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(agent.builddirectory)'
+    SourceFolder: '$(System.DefaultWorkingDirectory)'
     Contents: '**/target/*.?(war|jar)'
     TargetFolder: '$(build.artifactstagingdirectory)'
+
     
 - task: PublishPipelineArtifact@1
   inputs:
