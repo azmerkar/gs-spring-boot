@@ -24,7 +24,7 @@ steps:
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)'
     Contents: '**/target/*.?(war|jar)'
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
 
     
 - task: PublishPipelineArtifact@1
