@@ -8,6 +8,6 @@ public class HelloController {
     
     @RequestMapping("/")
     public String index() {
-        return "Hallo von Netcom Azure Pipelines Demo mit DEV Branch";
+        return "Hallo von Netcom Azure Pipelines Demo mit MASTER Branch";
     }   
 }
